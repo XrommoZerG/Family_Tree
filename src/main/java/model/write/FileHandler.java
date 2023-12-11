@@ -4,16 +4,31 @@ import java.io.*;
 
 public class FileHandler implements Writable {
 
+    @Override
     public boolean save(Serializable serializable, String filePath){
-        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(filePath))) {
-            objectOutputStream.writeObject(serializable);
-            return true;
-        }catch (Exception e){
-            e.printStackTrace();
-            return false;
+
+        boolean key = false;
+
+        File file = new File(filePath);
+        ObjectOutputStream objectOutputStream = null;
+        try (FileOutputStream fileOutputStream = new FileOutputStream(file)){
+            if (fileOutputStream != null) {
+                objectOutputStream = new ObjectOutputStream(fileOutputStream);
+                objectOutputStream.writeObject(serializable);
+                key = true;
+            }
         }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        return key;
+
     }
 
+    @Override
     public Object read(String filePath){
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(filePath))){
             return objectInputStream.readObject();

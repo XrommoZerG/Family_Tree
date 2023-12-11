@@ -2,6 +2,7 @@ package view;
 
 import model.HumanExcistsEception.HumanExcistsException;
 import model.human.Gender;
+import model.write.Writable;
 import present.Presenter;
 
 import java.io.IOException;
@@ -50,6 +51,9 @@ public class ConsoleUI implements View {
     private void printMenu() {
         System.out.println("Выберите пункт меню.");
         System.out.println(menu.menu());
+    }
+    public void setWriteble (Writable writable){
+        presenter.setWriteble(writable);
     }
 
     public void load() {

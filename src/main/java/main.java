@@ -1,3 +1,4 @@
+import model.write.FileHandler;
 import view.ConsoleUI;
 
 public class main {
@@ -16,6 +17,7 @@ public class main {
         //save(tree);
 
         ConsoleUI test = new ConsoleUI();
+        test.setWriteble(new FileHandler());
         test.start();
 
     }

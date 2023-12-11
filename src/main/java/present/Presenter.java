@@ -3,6 +3,7 @@ package present;
 import model.HumanExcistsEception.HumanExcistsException;
 import model.human.Gender;
 import model.service.Service;
+import model.write.Writable;
 import view.View;
 
 import java.io.IOException;
@@ -61,6 +62,10 @@ public class Presenter {
 
     public boolean save() {
         return service.save();
+    }
+
+    public void setWriteble(Writable writable){
+        service.setWritable(writable);
     }
 
     public boolean checkId(int id) {

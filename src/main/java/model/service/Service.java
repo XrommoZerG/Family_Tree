@@ -6,6 +6,7 @@ import model.builder.HumanBuilder;
 import model.human.Gender;
 import model.human.Human;
 import model.write.FileHandler;
+import model.write.Writable;
 
 import java.io.IOException;
 import java.time.DateTimeException;
@@ -15,6 +16,8 @@ public class Service {
     private FamilyTree<Human> tree;
     private HumanBuilder builder;
     private FileHandler fh;
+
+    private Writable writable;
 
     public Service() {
         tree = new FamilyTree<>();
@@ -58,16 +61,17 @@ public class Service {
     }
 
     public String getInfoShort() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Human member : tree) {
-            stringBuilder.append(member);
-            if (member.getBirthday() == null) {
-                stringBuilder.append(", возраст неизвестен\n");
-            } else {
-                stringBuilder.append(", возраст: ").append(member.age()).append("\n");
-            }
-        }
-        return stringBuilder.toString();
+        return tree.getInfoShort();
+//        StringBuilder stringBuilder = new StringBuilder();
+//        for (Human member : tree) {
+//            stringBuilder.append(member);
+//            if (member.getBirthday() == null) {
+//                stringBuilder.append(", возраст неизвестен\n");
+//            } else {
+//                stringBuilder.append(", возраст: ").append(member.age()).append("\n");
+//            }
+//        }
+//        return stringBuilder.toString();
 
     }
 
@@ -101,11 +105,16 @@ public class Service {
     }
 
     public boolean save() {
-        return fh.save(tree, "output.data");
+        return writable.save(tree, "output.data");
+       // return fh.save(tree, "output.data");
     }
 
     public boolean checkId(int id) {
         Human human = tree.findInTree(id);
         return human != null;
+    }
+
+    public void setWritable( Writable writable){
+        this.writable = writable;
     }
 }

@@ -95,7 +95,21 @@ public class FamilyTree<E extends ItemTree> implements Serializable,Iterable<E> 
         stringBuilder.append(" персон: \n");
         for (E human : humans){
             stringBuilder.append(human);
-            stringBuilder.append("\n");
+            stringBuilder.append("\n ");
+        }
+        return stringBuilder.toString();
+    }
+
+    public String getInfoShort(){
+        StringBuilder stringBuilder = new StringBuilder();
+        for(E member : humans){
+            stringBuilder.append(member);
+            if (member.getBirthday() == null) {
+                stringBuilder.append(", возраст не известен/n");
+            }
+            else {
+                stringBuilder.append(", возраст:").append(member.age()).append("/n");
+            }
         }
         return stringBuilder.toString();
     }

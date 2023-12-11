@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb039f4a-cd7e-4ca4-a161-e81adbe2379c" name="Changes" comment="Clone`">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/family_tree/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/family_tree/FamilyTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/write/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/write/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/write/Writable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/write/Writable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/present/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/present/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/ConsoleUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,18 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "module",
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;module&quot;,
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
