@@ -18,10 +18,6 @@ public class FamilyTree<E extends ItemTree> implements Serializable,Iterable<E> 
         humans = new ArrayList<>();
     }
 
-//    public FamilyTree(){
-//
-//        this(new ArrayList<>());
-//    }
 
     public FamilyTree(List<E> humans ){
         this.humans = humans;
@@ -41,10 +37,6 @@ public class FamilyTree<E extends ItemTree> implements Serializable,Iterable<E> 
         }
     }
 
-//    public void add(Human human){
-//        humans.add(human);
-//        human.setId(idhuman++);
-//    }
 
     public E getbyId(long id){
         if (!checkId(id)) {

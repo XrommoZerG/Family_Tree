@@ -15,14 +15,12 @@ import java.time.LocalDate;
 public class Service {
     private FamilyTree<Human> tree;
     private HumanBuilder builder;
-    private FileHandler fh;
 
     private Writable writable;
 
     public Service() {
         tree = new FamilyTree<>();
         builder = new HumanBuilder();
-        fh = new FileHandler();
     }
 
     public Human addNewToFamily(String name, String lastname, Gender gender) throws HumanExcistsException {
@@ -62,16 +60,6 @@ public class Service {
 
     public String getInfoShort() {
         return tree.getInfoShort();
-//        StringBuilder stringBuilder = new StringBuilder();
-//        for (Human member : tree) {
-//            stringBuilder.append(member);
-//            if (member.getBirthday() == null) {
-//                stringBuilder.append(", возраст неизвестен\n");
-//            } else {
-//                stringBuilder.append(", возраст: ").append(member.age()).append("\n");
-//            }
-//        }
-//        return stringBuilder.toString();
 
     }
 
@@ -101,7 +89,7 @@ public class Service {
         parent.setChild(child);
     }
     public void load() throws IOException {
-        tree = (FamilyTree) fh.read("output.data");
+        tree = (FamilyTree) writable.read("output.data");
     }
 
     public boolean save() {
